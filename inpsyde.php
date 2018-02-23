@@ -1,4 +1,4 @@
-<?php
+<?php  defined('ABSPATH') or die('No direct access allowed');
 /**
  * Plugin Name:     Inpsyde Plugin
  * Plugin URI:      http://www.github.com/thephpx/inpsyde
@@ -21,4 +21,5 @@ use App\Inpsyde;
 if (class_exists('Inpsyde')) {
     $inpsyde = Inpsyde::getInstance();
     $inpsyde->setup('db', $wpdb);
+    $inpsyde->init();
 }
