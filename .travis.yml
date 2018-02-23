@@ -49,7 +49,7 @@ before_script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-
+      echo "no config required here"
     fi
   - composer update
   - composer dump-autoload
