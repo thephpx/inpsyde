@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Inpsyde
+ * Plugin Name:     Inpsyde Plugin
  * Plugin URI:      http://www.github.com/thephpx/inpsyde
  * Description:     Inpsyde demo plguin
  * Author:          Faisal Ahmed
@@ -12,5 +12,13 @@
  * @package         Inpsyde
  */
 
+require_once('vendor/autoload.php');
 
+global $wpdb;
 
+use App\Inpsyde;
+
+if (class_exists('Inpsyde')) {
+    $inpsyde = Inpsyde::getInstance();
+    $inpsyde->setup('db', $wpdb);
+}
