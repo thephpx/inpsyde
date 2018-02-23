@@ -49,7 +49,7 @@ before_script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs --config-set default_standard PSR2
+
     fi
   - composer update
   - composer dump-autoload
@@ -62,5 +62,5 @@ script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs
+      phpcs --standard=PSR2
     fi
